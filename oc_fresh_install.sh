@@ -6,7 +6,7 @@ echo "Username (eg. flarum)?"
 read USERNAME
 echo "Updating Your OS................."
 sleep 2;
-sudo apt-get update && sudo apt-get upgrade -y
+sudo apt-get update -y
 
 echo "Installing Nginx"
 sleep 2;
@@ -47,7 +47,7 @@ sudo systemctl restart nginx.service
 
 echo "lets install php 7.0 and modules"
 sleep 2;
-sudo apt install php7.0 php7.0-fpm -y
+sudo apt install php7.0 php7.0-fpm pwgen -y
 sudo apt-get -y install php7.0-fpm php7.0-curl php7.0-gd php7.0-imap php7.0-mcrypt php7.0-readline php7.0-common php7.0-recode php7.0-mysql php7.0-cli php7.0-curl php7.0-mbstring php7.0-bcmath php7.0-mysql php7.0-opcache php7.0-zip php7.0-xml php-memcached php-imagick php-memcache memcached graphviz php-pear php-xdebug php-msgpack  php7.0-soap
 
 echo "Some php.ini tweaks"
