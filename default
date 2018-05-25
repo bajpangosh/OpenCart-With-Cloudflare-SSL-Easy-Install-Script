@@ -33,7 +33,7 @@ location ~ \.php$ {
 		include /etc/nginx/fastcgi_params;
 		# intercept errors for 404 redirect
 		fastcgi_intercept_errors on;
-		fastcgi_pass unix:/run/php/php7.2-fpm.sock;
+		fastcgi_pass unix:/run/php/php7.0-fpm.sock;
 		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 	}
   }
