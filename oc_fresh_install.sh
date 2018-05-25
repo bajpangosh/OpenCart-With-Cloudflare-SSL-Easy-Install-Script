@@ -37,6 +37,9 @@ cd ~
 wget github.com/opencart/opencart/archive/master.zip
 unzip master.zip
 mv /root/opencart-master/upload/* /var/www/"$DOMAIN"/
+sudo cp /var/www/"$DOMAIN"/config-dist.php /var/www/"$DOMAIN"/config.php
+sudo cp /var/www/"$DOMAIN"/admin/config-dist.php /var/www/"$DOMAIN"/admin/config.php
+
 rm -rf master.zip
 
 echo "Nginx server installation completed"
